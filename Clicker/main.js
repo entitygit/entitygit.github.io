@@ -25,10 +25,10 @@ let grandma = document.getElementById('grandma');
 let farm = document.getElementById('farm');
 let mine = document.getElementById('mine');
 
-let cursorprice = 15;
-let grandmaprice = 100;
-let farmprice = 1100;
-let mineprice = 12000;
+let cursorprice = 15 * (1.15 ** counts.cursors);
+let grandmaprice = 100 * (1.15 ** counts.grandmas);
+let farmprice = 1100 * (1.15 ** counts.farms);
+let mineprice = 12000 * (1.15 ** counts.mines);
 
 cursor.setAttribute("count", counts.cursors);
 grandma.setAttribute("count", counts.grandmas);
