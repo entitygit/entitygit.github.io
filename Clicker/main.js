@@ -1,7 +1,8 @@
+let counts;
 if (localStorage.getItem("counts"))
-    let counts = localStorage.getItem("counts");
+    counts = localStorage.getItem("counts");
 else
-    let counts = {
+    counts = {
         cookies: 0,
         cursors: 0,
         grandmas: 0,
