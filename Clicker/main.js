@@ -48,7 +48,7 @@ grandma.onclick = function() {
     if(num >= grandmaprice) {
         grandmacount++;
         num -= grandmaprice;
-        grandmaprice = 15 * (1.15 ** grandmacount);
+        grandmaprice = 100 * (1.15 ** grandmacount);
     }
     grandma.setAttribute("count", grandmacount);
     grandma.setAttribute("price", Math.ceil(grandmaprice));
@@ -57,7 +57,7 @@ farm.onclick = function() {
     if(num >= farmprice) {
         farmcount++;
         num -= farmprice;
-        farmprice = 15 * (1.15 ** farmcount);
+        farmprice = 1100 * (1.15 ** farmcount);
     }
     farm.setAttribute("count", farmcount);
     farm.setAttribute("price", Math.ceil(farmprice));
@@ -66,7 +66,7 @@ mine.onclick = function() {
     if(num >= mineprice) {
         minecount++;
         num -= mineprice;
-        mineprice = 15 * (1.15 ** minecount);
+        mineprice = 1200 * (1.15 ** minecount);
     }
     mine.setAttribute("count", minecount);
     mine.setAttribute("price", Math.ceil(mineprice));
