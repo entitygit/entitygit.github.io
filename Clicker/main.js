@@ -1,5 +1,5 @@
 let counts;
-if (localStorage.getItem("counts"))
+if (localStorage.getItem("counts").cookies)
     counts = localStorage.getItem("counts");
 else
     counts = {
