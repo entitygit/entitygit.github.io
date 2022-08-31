@@ -80,10 +80,13 @@ mine.onclick = function() {
 // CPS
 
 setInterval(function () {
-    counts.cookies += (counts.cursors * .1) + (counts.grandmas) + (counts.farms * 8) + (counts.mines * 47);
+    let cps = (counts.cursors * .1) + (counts.grandmas) + (counts.farms * 8) + (counts.mines * 47);
+    counts.cookies += cps;
     h1.innerText = Math.floor(counts.cookies);
+    document.getElementById('cpscounter').innerText = cps;
 }, 1000);
 
 setInterval(function () {
     localStorage.setItem("counts", JSON.stringify(counts));
 }, 10000);
+
