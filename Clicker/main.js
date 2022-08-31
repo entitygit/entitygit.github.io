@@ -7,7 +7,7 @@ else
         cursors: 0,
         grandmas: 0,
         farms: 0,
-        cursmines: 0
+        mines: 0
     };
 
 let h1 = document.getElementById('inbank');
