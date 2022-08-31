@@ -1,6 +1,6 @@
 let counts;
-if (localStorage.getItem("counts").cookies)
-    counts = localStorage.getItem("counts");
+if (localStorage.getItem("counts"))
+    counts = JSON.parse(localStorage.getItem("counts"));
 else
     counts = {
         cookies: 0,
@@ -85,5 +85,5 @@ setInterval(function () {
 }, 1000);
 
 setInterval(function () {
-    localStorage.setItem("counts", counts);
+    localStorage.setItem("counts", JSON.stringify(counts));
 }, 10000);
