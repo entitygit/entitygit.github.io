@@ -44,7 +44,7 @@ div.buildings {
     transform: translate(0%, -100%);
 }
 
-h2 {
+h2.cpscounter {
     text-align: center;
     font-family: sans-serif;
     margin-top: -1em;
