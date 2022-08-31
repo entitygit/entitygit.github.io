@@ -66,7 +66,7 @@ mine.onclick = function() {
     if(num >= mineprice) {
         minecount++;
         num -= mineprice;
-        mineprice = 1200 * (1.15 ** minecount);
+        mineprice = 12000 * (1.15 ** minecount);
     }
     mine.setAttribute("count", minecount);
     mine.setAttribute("price", Math.ceil(mineprice));
