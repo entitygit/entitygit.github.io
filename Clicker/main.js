@@ -68,7 +68,7 @@ farm.onclick = function() {
     farm.setAttribute("price", Math.ceil(farmprice));
 }
 mine.onclick = function() {
-    if(num >= mineprice) {
+    if(counts.cookies >= mineprice) {
         counts.mines++;
         counts.cookies -= mineprice;
         mineprice = 12000 * (1.15 ** counts.mines);
@@ -80,7 +80,7 @@ mine.onclick = function() {
 // CPS
 
 setInterval(function () {
-    num += (counts.cursors * .1) + (counts.grandmas) + (counts.farms * 8) + (counts.mines * 47);
+    counts.cookies += (counts.cursors * .1) + (counts.grandmas) + (counts.farms * 8) + (counts.mines * 47);
     h1.innerText = Math.floor(counts.cookies);
 }, 1000);
 
