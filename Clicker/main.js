@@ -1,4 +1,13 @@
-let num = 0;
+if (localStorage.getItem("counts"))
+    let counts = localStorage.getItem("counts");
+else
+    let counts = {
+        num: 0,
+        cursorCount: 0,
+        grandmaCount: 0,
+        farmCount: 0,
+        mineCount: 0
+    };
 
 let h1 = document.getElementById('inbank');
 let cookie = document.getElementById('cookie');
@@ -14,11 +23,6 @@ let cursor = document.getElementById('cursor');
 let grandma = document.getElementById('grandma');
 let farm = document.getElementById('farm');
 let mine = document.getElementById('mine');
-
-let cursorcount = 0;
-let grandmacount = 0;
-let farmcount = 0;
-let minecount = 0;
 
 let cursorprice = 15;
 let grandmaprice = 100;
@@ -78,3 +82,7 @@ setInterval(function () {
     num += (cursorcount * .1) + (grandmacount) + (farmcount * 8) + (minecount * 47);
     h1.innerText = Math.floor(num);
 }, 1000);
+
+setInterval(function () {
+    localStorage.setItem("counts", counts);
+}, 10000);
